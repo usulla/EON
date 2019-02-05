@@ -1,0 +1,20 @@
+.FirstPage{
+
+	    height: 100vh;
+ width: 100%;
+ background: #000;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+.FirstPage__center-block{
+	width: 100%;
+}
+.bottles_line{
+		background:  url('../../images/FirstPage/firstpage_bg.png') center center no-repeat;
+		   background-size: cover;
+		   width: 100%;
+		   text-align: center;
+}
