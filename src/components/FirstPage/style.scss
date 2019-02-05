@@ -1,20 +1,78 @@
-.FirstPage{
+.FirstPage {
 
-	    height: 100vh;
- width: 100%;
- background: #000;
-        display: flex;
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     overflow: hidden;
-}
-.FirstPage__center-block{
-	width: 100%;
-}
-.bottles_line{
-		background:  url('../../images/FirstPage/firstpage_bg.png') center center no-repeat;
-		   background-size: cover;
-		   width: 100%;
-		   text-align: center;
+
+    .FirstPage__center-block {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+        .FirstPage__toptext {
+            position: absolute;
+            top: 0;
+            text-align: center;
+
+            .logo {
+                width: 30vw;
+                max-width: 456px;
+                    margin: 0 auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .titles {
+                text-align: center;
+                font-family: "Gotham Pro", sans-serif;
+                font-size: 1.5em;
+                text-transform: uppercase;
+                color: #fff;
+
+                span {
+                    color: #ff7e00;
+                }
+
+                .title1 {
+                    font-weight: 700;
+                }
+
+                .title2 {
+                    font-weight: 400;
+                    margin-top: 20px;
+
+                    img {
+                        width: 3em;
+                        margin: 0 5px -0.1em 5px;
+                    }
+                }
+            }
+        }
+
+        .bottles_line {
+            background: url('../../images/FirstPage/firstpage_bg2.png') top center no-repeat;
+            background-size: cover;
+            width: 100%;
+            text-align: center;
+            height: 100vh;
+
+            .bottles {
+                background: url('../../images/FirstPage/bottles_eon.png') center center no-repeat;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
 }
