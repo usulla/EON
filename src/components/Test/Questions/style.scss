@@ -1,0 +1,187 @@
+.question_title {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 80vw;
+    max-width: 1100px;
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+.answers {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    max-width: 1500px;
+
+    .answer {
+        border-radius: 16px;
+        background-color: rgba(22, 3, 0, .5);
+        margin: 18px;
+        padding: 3vw 10px;
+        text-align: center;
+        text-transform: none;
+        font-weight: 300;
+        font-size: 1em;
+        flex-basis: 100%;
+        position: relative;
+
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+
+        &.overanswer:after {
+            opacity: 0.5;
+            font-family: FontAwesome;
+            top: calc(50% - 8vw);
+            font-size: 12vw;
+            position: absolute;
+            left: calc(50% - 5vw);
+        }
+
+        &.error {
+            background-color: rgba(255, 55, 55, .5);
+
+            &:after {
+                color: #ff3737;
+                content: "\f00d";
+            }
+        }
+
+        &.true {
+            background-color: rgba(80, 211, 92, .5);
+
+            &:after {
+                color: #50d35c;
+                content: "\f00c";
+            }
+        }
+
+        &.null {
+            background-color: rgba(0, 0, 0, .5);
+
+            &:after {
+                color: #ffffff;
+                content: "\f10c";
+                opacity: 0.15;
+            }
+        }
+
+        .answer_num {
+            font-size: 1.3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .answer_num,
+        .answer_text {
+            z-index: 2;
+            position: relative;
+        }
+    }
+}
+
+.battery_btn.btn1 {
+    background: url('../../../images/Test/battery1.png') center center no-repeat;
+    background-size: cover;
+}
+
+.battery_btn.btn2 {
+    background: url('../../../images/Test/battery2.png') center center no-repeat;
+    background-size: cover;
+}
+
+.battery_btn.btn3 {
+    background: url('../../../images/Test/battery3.png') center center no-repeat;
+    background-size: cover;
+}
+
+.battery_btn.btn4 {
+    background: url('../../../images/Test/battery4.png') center center no-repeat;
+    background-size: cover;
+}
+
+.battery_btn.btn5 {
+    background: url('../../../images/Test/battery5.png') center center no-repeat;
+    background-size: cover;
+}
+
+.panels_num_quesion {
+    display: flex;
+    align-items: center;
+    width: 90vw;
+    max-width: 1500px;
+    height: 12px;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 0 5px;
+
+    .panels_num_quesion__item {
+        height: 2px;
+        width: 0;
+        background: #fff;
+        position: relative;
+        transition: all .5s;
+
+        &.current {
+            width: 25%;
+
+            //    opacity:1;
+            &:after {
+                opacity: 1;
+            }
+
+        }
+
+        &:nth-child(1) {
+
+            .num_answer {
+                left: 0em;
+            }
+
+            &:before {
+                background: #fff;
+                position: absolute;
+                left: 0;
+                width: 6px;
+                height: 6px;
+                border-radius: 100%;
+                display: block;
+                content: '';
+                margin-top: -2px;
+            }
+        }
+
+        &:nth-child(4) {
+            .num_answer:nth-child(2) {
+                right: 0;
+                text-align: right;
+            }
+        }
+
+        &:after {
+            background: #fff;
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+            display: block;
+            content: '';
+            margin-top: -2px;
+            position: absolute;
+            right: 0;
+            opacity: 0;
+        }
+
+        .num_answer {
+            position: absolute;
+            bottom: -25px;
+            font-size: 10px;
+            font-weight: 400;
+            left: -3em;
+        }
+    }
+}
