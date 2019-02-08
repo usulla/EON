@@ -1,0 +1,106 @@
+.About {
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    padding: 83px 0;
+    background: #000 url('../../images/About/about_bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center 200px;
+    background-size: 200%;
+
+    .logo_eon {
+        max-width: 300px;
+        width: 20vw;
+        margin: 0 auto;
+    }
+
+    .description {
+        width: 80vw;
+        max-width: 935px;
+        margin: 40px auto 0;
+    }
+
+    .tastes {
+        width: 80vw;
+        max-width: 935px;
+        margin: 0 auto;
+
+        .taste {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -14vw;
+
+            &:nth-child(1) {
+                margin-top: 0vw;
+            }
+
+            &:nth-child(2n) {
+
+                .taste_description {
+                    order: 2;
+                }
+
+                .bottle_image {
+                    order: 1;
+                    margin-left: -100px;
+                }
+            }
+
+            &:nth-child(2) {
+                .title {
+                    background: #a80f5b;
+                }
+            }
+
+            &:nth-child(3) {
+                .title {
+                    background: #5bce32;
+                }
+            }
+
+            &:nth-child(4) {
+                .title {
+                    background: #233056;
+                }
+            }
+
+            &:nth-child(5) {
+                .title {
+                    background: #e24d0b;
+                }
+            }
+        }
+
+        .taste_description {
+            width: 40%;
+            float: left;
+
+            .title {
+                background-color: #007d25;
+                display: inline-block;
+                padding: 10px 45px;
+                font-weight: 600;
+            }
+
+            .text {
+                color: #a5a5a5;
+                font-size: 15px;
+                margin-top: 20px;
+                width: 291px;
+            }
+        }
+
+        .bottle_image {
+        	margin-right: -100px;
+            text-align: right;
+            width: 56%;
+            margin-right: 4%;
+            float: right;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.Test .battery_btn{
+    margin-bottom: -9vw;
+    z-index: 2;
+    position: relative;
+}
+
+.result_content {
+    max-width: 765px;
+    width: 60vw;
+    display: inline-block;
+    background: rgba(0, 0, 0, .5);
+    padding: 8vw 60px 40px;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: 300;
+    text-transform: none;
+
+    .result_title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.2em;
+
+        span {
+            color: #ff7e00;
+
+        }
+    }
+
+    .result_text {
+        text-align: left;
+    }
+
+    .result_socbtns {
+        margin: 10px auto 0;
+        display: inline-block;
+    }
+}

@@ -15,16 +15,26 @@
     max-width: 1500px;
 
     .answer {
+        display: flex;
+        align-items: center;
+        height: 19vw;
+        max-height: 245px;
         border-radius: 16px;
         background-color: rgba(22, 3, 0, .5);
         margin: 18px;
-        padding: 3vw 10px;
+        padding: 3vw 2vw;
         text-align: center;
         text-transform: none;
         font-weight: 300;
         font-size: 1em;
         flex-basis: 100%;
         position: relative;
+        margin-top: 20px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgba(22, 3, 0, .7);
+        }
 
         &:nth-child(1) {
             margin-left: 0;
@@ -71,10 +81,16 @@
             }
         }
 
+        .answer_content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
         .answer_num {
             font-size: 1.3em;
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 0.5em;
         }
 
         .answer_num,
@@ -82,7 +98,17 @@
             z-index: 2;
             position: relative;
         }
+
+        .answer_text {
+            height: 7vw;
+            max-height: 90px;
+        }
     }
+}
+
+.Questions .battery_btn {
+    margin-top: -5vw !important;
+    margin-bottom: 0 !important;
 }
 
 .battery_btn.btn1 {
@@ -120,6 +146,10 @@
     background-color: rgba(0, 0, 0, .5);
     padding: 0 5px;
 
+    &.q5 .num_answer {
+        opacity: 1!important;
+    }
+
     .panels_num_quesion__item {
         height: 2px;
         width: 0;
@@ -135,12 +165,21 @@
                 opacity: 1;
             }
 
+            .num_answer {
+                opacity: 1;
+            }
+
+            &+.panels_num_quesion__item .num_answer {
+                opacity: 1;
+            }
+
         }
 
         &:nth-child(1) {
 
             .num_answer {
                 left: 0em;
+                opacity: 1 !important;
             }
 
             &:before {
@@ -160,6 +199,8 @@
             .num_answer:nth-child(2) {
                 right: 0;
                 text-align: right;
+                left: auto;
+                opacity: 0;
             }
         }
 
@@ -182,6 +223,10 @@
             font-size: 10px;
             font-weight: 400;
             left: -3em;
+            opacity: 0;
+            height: 1vw;
+            width: 8em; 
+            transition: .2s opacity .2s;
         }
     }
 }

@@ -10,8 +10,9 @@ class TestStart extends Component {
 как далеко ты пройдешь<br/>
 в шоу «ПЕСНИ»
 </div>
-  <div className='battery_btn'>
+  <div className='battery_btn' onClick={() => { this.props.updatetest(false,true,false)}}>
   Начать тест
+
   </div>
   </div>
         );
