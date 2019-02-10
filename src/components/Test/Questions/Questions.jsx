@@ -7,24 +7,72 @@ class Questions extends Component {
         super();
         this.state = {
             currentQuestion: 0,
-            questionsLength: dataQuestions.questions.length
+            questionsLength: dataQuestions.questions.length,
+            answers: [ [2,-2,0],[-2,2,0],[-2,2,0],[-2,2,0],[0,2,-2] ],
+            userPoints: 0
         };
     }
-    nextQuestion = () => {
-       this.setState(prevState => {
-         return {currentQuestion: this.state.currentQuestion !== this.state.questionsLength-1 ? prevState.currentQuestion + 1: 0}
-      });
-    if(this.state.currentQuestion !== this.state.questionsLength-1){
-       document.querySelectorAll('.panels_num_quesion__item')[this.state.currentQuestion].classList.add('current');
-   } else {
-         document.querySelectorAll('.panels_num_quesion__item').forEach(item => {
+
+    nextQuestion = (e) => {
+
+       // If not last question
+    if(this.state.currentQuestion !== this.state.questionsLength){
+
+        // Mark the index of the user's response to the question
+        const usersResponse = e.currentTarget.dataset.id;
+        const currentPoints = this.state.answers[this.state.currentQuestion][usersResponse];
+        
+      // Add classes to answers
+      document.querySelectorAll('.answer').forEach((item, index) => {
+      const itemPoint = this.state.answers[this.state.currentQuestion][index];
+      if(itemPoint == 2){
+       item.classList.add('true');
+      }
+      else if (itemPoint == 0){
+        item.classList.add('null');
+      }
+      else{
+        item.classList.add('error');
+      }
+      })  
+ // Increase currentQuestion or equate to zero if this is the last question
+
+  setTimeout(
+    function() {
+       this.setState(prevState => { 
+        return {currentQuestion: this.state.currentQuestion !== this.state.questionsLength-1 ? prevState.currentQuestion + 1: 0} 
+    });
+     document.querySelectorAll('.answer').forEach(item => {
+        item.classList.remove('null');
+item.classList.remove('error');
+item.classList.remove('true');
+     })    
+      // Mark the current question in the panel with the question number
+       if (document.querySelectorAll('.panels_num_quesion__item')[this.state.currentQuestion-1]){
+       document.querySelectorAll('.panels_num_quesion__item')[this.state.currentQuestion-1].classList.add('current');
+   }
+   else{
+ document.querySelectorAll('.panels_num_quesion__item').forEach(item => {
            item.classList.remove('current');
          })
    }
     }
+    .bind(this),
+   1000
+);
+        // Summarize the points of the user
+       this.setState({userPoints: this.state.userPoints + Number(currentPoints)});
+       if(currentPoints == -2 && this.state.userPoints == 0){
+         this.setState({userPoints:0});
+       }
 
+       // If last question
+      }
+    }
+   
     render() {
-        console.log(this.state.currentQuestion)
+        console.log(this.state.userPoints, 'userPoints');
+         console.log(this.state.currentQuestion, 'currentQuestion');
         return (
             <div className='Questions'>
               <div className='battery_btn btn1'></div>
@@ -35,7 +83,7 @@ class Questions extends Component {
 <div className='answers'>
 {dataQuestions.questions[this.state.currentQuestion].answers.map((item, index) => {
     return(
-     <div className='answer overanswer' key={index} onClick={this.nextQuestion}>
+     <div className='answer overanswer' key={index} data-id={index} onClick={this.nextQuestion}>
      <div className='answer_content'>
          <div className='answer_num'>
             {index+1}.
@@ -47,9 +95,9 @@ class Questions extends Component {
      </div>
      )
 })
-}
-    
-        </div>
+} 
+</div>
+
  <div className={`panels_num_quesion q${this.state.currentQuestion+1}`}>
     <div className='panels_num_quesion__item'>
     <span className='num_answer'>вопрос 1</span>
