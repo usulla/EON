@@ -1,3 +1,4 @@
+@import "../../sass/variables.scss";
 .About {
     background: #000;
     display: flex;
@@ -5,8 +6,12 @@
     padding: 83px 0;
     background: #000 url('../../images/About/about_bg.jpg') no-repeat;
     background-size: cover;
-    background-position: center 200px;
+    background-position: center 100px;
     background-size: 200%;
+
+        @media (min-width:$mobile_l+1) and (max-width:$tablets) {
+    background-size: 250%;
+    }
 
     .logo_eon {
         max-width: 300px;
@@ -18,6 +23,10 @@
         width: 80vw;
         max-width: 935px;
         margin: 40px auto 0;
+        font-size: 21px;
+    @media (min-width:$mobile_l+1) and (max-width:$tablets) {
+font-size:18px;
+    }
     }
 
     .tastes {
@@ -79,13 +88,14 @@
             .title {
                 background-color: #007d25;
                 display: inline-block;
-                padding: 10px 45px;
-                font-weight: 600;
+                   padding: 12px 45px;
+    font-weight: 600;
+    font-size: 1.2em;
             }
 
             .text {
-                color: #a5a5a5;
-                font-size: 15px;
+                color: #cac5c5;;
+                font-size: 16px;
                 margin-top: 20px;
                 width: 291px;
             }

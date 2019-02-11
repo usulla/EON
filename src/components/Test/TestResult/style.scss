@@ -1,3 +1,5 @@
+@import "../../../sass/variables.scss";
+
 .Test .battery_btn{
     margin-bottom: -9vw;
     z-index: 2;
@@ -12,14 +14,18 @@
     padding: 8vw 60px 40px;
     border-radius: 16px;
     text-align: center;
-    font-size: 1.1em;
+        font-size: 18px;
     font-weight: 300;
     text-transform: none;
+
+     @media (min-width:$mobile_l+1) and (max-width:$tablets) {
+        font-size: 16px;
+        }
 
     .result_title {
         text-transform: uppercase;
         font-weight: 700;
-        font-size: 1.2em;
+        font-size: 1.6em;
 
         span {
             color: #ff7e00;

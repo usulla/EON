@@ -8,7 +8,7 @@ import style from './style.scss'
 class FirstPage extends Component {
     render() {
         return (
-            <div className='FirstPage'>
+        <div className='FirstPage'>
         <div className='FirstPage__center-block'>
         <div className='FirstPage__toptext'>
         <div className='logo'>
@@ -23,14 +23,19 @@ class FirstPage extends Component {
             Будь всегда на <img src={logo_eon} /> впереди!
             </div>
         </div>
-                </div>
+        </div>
         <div className='bottles_line'>
             <div className='bottles'>
                 {/* <img src={bottles_eon} alt='EON'/> */}
              </div>
         </div>
         </div>
+        <div className='age_limit'>
+        <img src={age_limit} />
+        Энергетический напиток. Киви бласт. Джинжер краш.<br/>
+        Блэк пауэр. Цитрус панч. Алмонд раш.
         </div>
+         </div>
         );
     }
 }
