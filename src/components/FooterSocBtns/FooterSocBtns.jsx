@@ -5,9 +5,14 @@ class FooterSocBtns extends Component {
     render() {
       return (
             <div className='FooterSocBtns'>
-            	<div className='socbtn vk'><a href='/'><i className='fa fa-vk'/></a></div>
-          		<div className='socbtn fb'><a href='/'><i className='fa fa-facebook'/></a></div>
-            	<div className='socbtn insta'><a href='/'><i className='fa fa-instagram'/></a></div>
+            	<a className='socbtn vk' href='/'  target="_blank">
+            	<i className='fa fa-vk'/>
+                </a>
+          		<a className='socbtn fb' href='/'  target="_blank"><i className='fa fa-facebook'/>
+          		</a>
+          		<a className='socbtn insta' href='/'  target="_blank">
+            <i className='fa fa-instagram'/>
+            	</a>
   			</div>
         );
     }

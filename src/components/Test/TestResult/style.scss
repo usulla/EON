@@ -33,6 +33,7 @@
 
     .result_socbtns {
         margin: 10px auto 0;
-        display: inline-block;
+            display: flex;
+    justify-content: center;
     }
 }

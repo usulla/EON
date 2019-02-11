@@ -51,22 +51,33 @@ item.classList.remove('true');
        if (document.querySelectorAll('.panels_num_quesion__item')[this.state.currentQuestion-1]){
        document.querySelectorAll('.panels_num_quesion__item')[this.state.currentQuestion-1].classList.add('current');
    }
-   else{
+   else {
+                   if (this.state.userPoints == 0){
+      this.props.testpoints(1);
+    } else if (this.state.userPoints == 2){
+this.props.testpoints(2);
+    } else if (this.state.userPoints == 4 || this.state.userPoints == 6) {
+this.props.testpoints(3);
+    } else if (this.state.userPoints == 8) {
+this.props.testpoints(4);
+    } else {
+this.props.testpoints(5);
+    }
+           this.props.updatetest(false,false,true);
+
  document.querySelectorAll('.panels_num_quesion__item').forEach(item => {
            item.classList.remove('current');
          })
    }
     }
     .bind(this),
-   1000
+   1500
 );
-        // Summarize the points of the user
+       // Summarize the points of the user
        this.setState({userPoints: this.state.userPoints + Number(currentPoints)});
        if(currentPoints == -2 && this.state.userPoints == 0){
          this.setState({userPoints:0});
        }
-
-       // If last question
       }
     }
    
@@ -75,7 +86,7 @@ item.classList.remove('true');
          console.log(this.state.currentQuestion, 'currentQuestion');
         return (
             <div className='Questions'>
-              <div className='battery_btn btn1'></div>
+              <div className={`battery_btn btn${this.state.currentQuestion+1}`}></div>
             <div className='question_title'>
 {dataQuestions.questions[this.state.currentQuestion].question}
 </div>
@@ -119,3 +130,4 @@ item.classList.remove('true');
 }
 
 export default Questions;
+

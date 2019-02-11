@@ -10,12 +10,17 @@ class Test extends Component {
         this.state = {
             showTestStart: true,
             showQuestions: false,
-            showTestResult: false
+            showTestResult: false,
+            testPoints: 0
         };
     }
     updateShowTest = (showstart, showquestions, showresult) => {
         this.setState({ showTestStart: showstart, showQuestions: showquestions, showTestResult: showresult })
+    };
+    testPoints = (points) => {
+        this.setState({ testPoints: points })
     }
+
     render() {
         const { showTestStart, showQuestions, showTestResult } = this.state;
         return (
@@ -23,9 +28,9 @@ class Test extends Component {
              {showTestStart ? (
                	<TestStart updatetest={this.updateShowTest} />
                	): showQuestions ? (
-               	<Questions/>
+               	<Questions updatetest={this.updateShowTest} testpoints={this.testPoints}/>
                	) : (
-               	<TestResult/>
+               	<TestResult testpoints={this.state.testPoints} />
                	)
              }
          </div>
