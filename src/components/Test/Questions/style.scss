@@ -1,25 +1,35 @@
 @import "../../../sass/variables.scss";
 
 .question_title {
-    font-size: 1.2em;
+    font-size: 1.4em;
     font-weight: 700;
     text-transform: uppercase;
     width: 90vw;
     max-width: 1300px;
     text-align: center;
     margin: 0 auto 20px;
+
+     @media (max-width: $mobile_l+1) and (max-aspect-ratio: $max-aspect-ratio) { 
+            font-size: 1.2em;
+            min-height: 32vw;
+    }
 }
 
 .answers {
     display: flex;
     flex-direction: row;
     width: 90vw;
-        max-width: 1300px;
+    max-width: 1300px;
     margin: 0 auto;
+
+   @media (max-width: $mobile_l+1) and (max-aspect-ratio: $max-aspect-ratio) { 
+        flex-direction: column;
+    }
 
     .answer {
         display: flex;
         align-items: center;
+            justify-content: center;
         height: 19vw;
         max-height: 245px;
         border-radius: 16px;
@@ -29,15 +39,24 @@
         text-align: center;
         text-transform: none;
         font-weight: 300;
-        font-size: 18px;
+        font-size: 1em;
         flex-basis: 100%;
         position: relative;
         margin-top: 20px;
 
         @media (min-width:$mobile_l+1) and (max-width:$tablets) {
         font-size: 15px;
-            height: 18vw;
+        height: 18vw;
         }
+       @media (max-width: $mobile_l+1) and (max-aspect-ratio: $max-aspect-ratio) { 
+          height: 38vw;
+         max-height: none;
+         margin: 5px 18px;
+         }
+
+         @media (max-width: $mobile_p+1) { 
+                height: 45vw;
+         }
 
         &:hover {
             cursor: pointer;
@@ -46,10 +65,17 @@
 
         &:nth-child(1) {
             margin-left: 0;
+       @media (max-width: $mobile_l+1) and (max-aspect-ratio: $max-aspect-ratio) { 
+          margin-left: 18px;
+        }
+
         }
 
         &:nth-child(3) {
             margin-right: 0;
+             @media (max-width: $mobile_l+1) and (max-aspect-ratio: $max-aspect-ratio) { 
+          margin-right: 18px;
+        }
         }
 
         &.overanswer:after {
@@ -59,6 +85,12 @@
             font-size: 12vw;
             position: absolute;
             left: calc(50% - 5vw);
+
+              @media (max-width: $mobile_l+1) and (max-aspect-ratio: $max-aspect-ratio) { 
+                   font-size: 17vw;
+                   top: calc(50% - 12vw);
+                    left: calc(50% - 8vw);
+            }
         }
 
         &.error {
@@ -110,6 +142,10 @@
         .answer_text {
             height: 7vw;
             max-height: 90px;
+
+           @media (max-width: $mobile_l+1) and (max-aspect-ratio: $max-aspect-ratio) { 
+            height: auto;
+            }
         }
     }
 }
@@ -118,6 +154,13 @@
     margin-top: -5vw !important;
     margin-bottom: 0 !important;
     height:14vw;
+
+  @media (min-width:1024px) and (max-width:1400px) {
+width:25vw;
+    }
+  @media (max-width: $mobile_l+1) and (max-aspect-ratio: $max-aspect-ratio) { 
+        margin-bottom: -5vw !important;
+}
 }
 
 .battery_btn.btn1 {
@@ -155,6 +198,10 @@
     background-color: rgba(0, 0, 0, .5);
     padding: 0 5px;
     margin-top: 4vh;
+
+       @media (max-width: $mobile_l+1) and (max-aspect-ratio: $max-aspect-ratio) { 
+            margin-bottom: 50px;
+    }
 
     &.q5 .num_answer {
         opacity: 1!important;
@@ -229,14 +276,24 @@
 
         .num_answer {
             position: absolute;
-            bottom: -25px;
-            font-size: 10px;
+            bottom: -30px;
+            font-size: 11px;
             font-weight: 400;
             left: -3em;
             opacity: 0;
             height: 1vw;
             width: 8em; 
             transition: .2s opacity .2s;
+
+             @media (max-width: $mobile_l+1) and (max-aspect-ratio: $max-aspect-ratio) { 
+               bottom: -20px;
+               font-size: 8px;
+            }
+
+              @media (min-width:$mobile_l+1) and (max-width:$tablets) {
+               font-size: 10px;
+               bottom:-25px; 
+              }
         }
     }
 }

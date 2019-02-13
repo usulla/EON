@@ -1,3 +1,4 @@
+@import "../../sass/variables.scss";
 .FirstPage {
 
     height: 100vh;
@@ -26,6 +27,11 @@
                 max-width: 456px;
                     margin: 0 auto;
 
+                    @media (max-width: $tablets) and (max-aspect-ratio: $max-aspect-ratio) { 
+                        width: 70vw;
+                        max-width: 456px;
+                    }
+
                 img {
                     width: 100%;
                 }
@@ -35,6 +41,10 @@
                 text-align: center;
                 font-size: 1.5em;
                 text-transform: uppercase;
+
+              @media (max-width: $mobile_l+1) { 
+                        max-width: 95vw;
+                }
 
                 span {
                     color: #ff7e00;
@@ -47,6 +57,10 @@
                 .title2 {
                     font-weight: 400;
                     margin-top: 20px;
+
+                 @media (max-width: $mobile_l+1) { 
+                         font-size: 0.8em;
+                    }
 
                     img {
                         width: 3em;
@@ -63,13 +77,10 @@
             text-align: center;
             height: 100vh;
 
-            .bottles {
-                background: url('../../images/FirstPage/bottles_eon.png') center center no-repeat;
-
-                img {
-                    width: 100%;
-                }
-            }
+             @media (max-width: $mobile_l+1) { 
+                background-size: 200%;
+                background-position: bottom center;
+             }
         }
     }
 

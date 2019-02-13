@@ -8,7 +8,7 @@ class Questions extends Component {
         this.state = {
             currentQuestion: 0,
             questionsLength: dataQuestions.questions.length,
-            answers: [ [2,-2,0],[-2,2,0],[-2,2,0],[-2,2,0],[0,2,-2] ],
+            answers: [ [2,-2,0],[-2,2,0],[-2,0,2],[-2,2,0],[0,2,-2] ],
             userPoints: 0
         };
     }

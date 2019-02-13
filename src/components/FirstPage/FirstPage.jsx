@@ -15,24 +15,34 @@ class FirstPage extends Component {
             <img src={logo_pesni} />
         </div>
         <div className='titles'>
+         <div className='only_desktop'>
             <div className='title1'>
             Пройди тест и узнай, как далеко<br/>
             ты пройдешь <span>в шоу «ПЕСНИ»</span>
             </div>
+         </div>
+         <div className='only_mobile'>
+            <div className='title1'>
+            Пройди тест и узнай,<br/> 
+            как далеко ты пройдешь<br/>
+            <span>в шоу «ПЕСНИ»</span>
+            </div>
+         </div>
             <div className='title2'>
             Будь всегда на <img src={logo_eon} /> впереди!
             </div>
         </div>
         </div>
-        <div className='bottles_line'>
-            <div className='bottles'>
-                {/* <img src={bottles_eon} alt='EON'/> */}
-             </div>
+        <div className='bottles_line'></div>
         </div>
-        </div>
-        <div className='age_limit'>
+        <div className='age_limit only_desktop'>
         <img src={age_limit} />
         Энергетический напиток. Киви бласт. Джинжер краш.<br/>
+        Блэк пауэр. Цитрус панч. Алмонд раш.
+        </div>
+        <div className='age_limit only_mobile'>
+        <img src={age_limit} />
+        Энергетический напиток. Киви бласт. Джинжер краш.
         Блэк пауэр. Цитрус панч. Алмонд раш.
         </div>
          </div>
