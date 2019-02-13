@@ -82,8 +82,6 @@ this.props.testpoints(5);
     }
    
     render() {
-        console.log(this.state.userPoints, 'userPoints');
-         console.log(this.state.currentQuestion, 'currentQuestion');
         return (
             <div className='Questions'>
               <div className={`battery_btn btn${this.state.currentQuestion+1}`}></div>
