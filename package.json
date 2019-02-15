@@ -5,6 +5,7 @@
   "dependencies": {
     "imagemin": "^6.1.0",
     "node-sass": "^4.11.0",
+    "nodelist-foreach-polyfill": "^1.2.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
@@ -20,8 +21,8 @@
   },
   "browserslist": [
     ">0.2%",
+    "ie 10",
     "not dead",
-    "not ie <= 11",
     "not op_mini all"
   ],
   "devDependencies": {

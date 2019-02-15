@@ -19,7 +19,7 @@
 
         .FirstPage__toptext {
             position: absolute;
-               top: 4vh;
+            top: 4vh;
             text-align: center;
 
             .logo {
@@ -69,6 +69,14 @@
                 }
             }
         }
+           @media all and (-ms-high-contrast:none){
+  .FirstPage__toptext {
+width:100%;
+  }
+   *::-ms-backdrop, .FirstPage__toptext{
+width:100%;
+   }
+     }
 
         .bottles_line {
             background: url('../../images/FirstPage/firstpage_bg2.png') top center no-repeat;
@@ -97,4 +105,7 @@
     }
     }
 
+}
+@media all and (-ms-high-contrast:none){
+     .FirstPage__center-block { display:block!important; } /* IE10 */
 }

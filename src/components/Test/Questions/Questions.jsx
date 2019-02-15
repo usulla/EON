@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import style from './style.scss'
 import dataQuestions from './Questions.json'
+import 'nodelist-foreach-polyfill'
 
 class Questions extends Component {
     constructor() {
@@ -92,7 +93,7 @@ this.props.testpoints(5);
 <div className='answers'>
 {dataQuestions.questions[this.state.currentQuestion].answers.map((item, index) => {
     return(
-     <div className='answer overanswer' key={index} data-id={index} onClick={this.nextQuestion}>
+     <div className={`answer overanswer question${this.state.currentQuestion+1}`} key={index} data-id={index} onClick={this.nextQuestion}>
      <div className='answer_content'>
          <div className='answer_num'>
             {index+1}.

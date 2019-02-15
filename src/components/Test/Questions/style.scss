@@ -27,7 +27,7 @@
     }
 
     .answer {
-        display: flex;
+ display: flex;
         align-items: center;
             justify-content: center;
         height: 19vw;
@@ -43,6 +43,8 @@
         flex-basis: 100%;
         position: relative;
         margin-top: 20px;
+
+  
 
         @media (min-width:$mobile_l+1) and (max-width:$tablets) {
         font-size: 15px;
@@ -148,6 +150,12 @@
             }
         }
     }
+
+   @media all and (-ms-high-contrast:none)
+      {
+     .answer { display:block!important } /* IE10 */
+     *::-ms-backdrop, .answer { display:block!important } /* IE11 */
+     }
 }
 
 .Questions .battery_btn {
