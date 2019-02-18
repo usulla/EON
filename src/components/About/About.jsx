@@ -21,11 +21,11 @@ class About extends Component {
                         <div className='taste_description'>
                             <div className='title'>
                                 KIWI BLAST
-                </div>
+                            </div>
                             <div className='text'>
-        pending changes                        Харизматичный микс киви
-                                и ананаса — это взрывное сочетание тропической энергии. KIWI BLAST — это напиток для тех, кто ценит высокое качество
-                                и пробовал наслаждение на вкус.
+                                pending changes                        Харизматичный микс киви
+                                                        и ананаса — это взрывное сочетание тропической энергии. KIWI BLAST — это напиток для тех, кто ценит высокое качество
+                                                        и пробовал наслаждение на вкус.
                 </div>
                         </div>
                         <div className='bottle_image'>
@@ -72,7 +72,7 @@ class About extends Component {
                                 и тонизирует волю
                                 к успеху. CITRUS PUNCH —
                                 это выбор тех, кто привык действовать и все успевать.
-                    </div>
+                            </div>
                         </div>
                         <div className='bottle_image'>
                             <img src={bottle4} alt='EON' />
@@ -83,11 +83,11 @@ class About extends Component {
                         <div className='taste_description'>
                             <div className='title'>
                                 ALMOND RUSH
-                    </div>
+                            </div>
                             <div className='text'>
                                 Неординарный микс свежести абрикоса и ароматной миндальной горчинки — прекрасно тонизирует и освежает. ALMOND RUSH —
                                 это напиток для тех, кто стремится в любых обстоятельствах сохранять активность и свежий взгляд на жизнь.
-                    </div>
+                            </div>
                         </div>
                         <div className='bottle_image'>
                             <img src={bottle5} alt='EON' />
