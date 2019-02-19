@@ -4,12 +4,12 @@ self.__precacheManifest = [
     "url": "/static/media/GothamPro-Light.90f8e664.eot"
   },
   {
-    "revision": "539b02c8acbdb5fe6fb3",
-    "url": "/static/css/main.4647a5a4.chunk.css"
+    "revision": "0ac55c37a2948a0a7498",
+    "url": "/static/css/main.7263e363.chunk.css"
   },
   {
-    "revision": "99ac1df51f239767ad2d",
-    "url": "/static/js/1.99ac1df5.chunk.js"
+    "revision": "9a9bcf02d50ad2259a25",
+    "url": "/static/js/1.9a9bcf02.chunk.js"
   },
   {
     "revision": "229c360febb4351a89df",
@@ -52,20 +52,20 @@ self.__precacheManifest = [
     "url": "/static/media/GothamPro-Black.3bdd2872.ttf"
   },
   {
-    "revision": "57a1bd797d48e05aca3cc4d5a79e07cb",
-    "url": "/static/media/GothamPro-Bold.57a1bd79.ttf"
+    "revision": "33b6cd01c674e0c5d59cde2e48603324",
+    "url": "/static/media/GothamPro-Bold.33b6cd01.eot"
   },
   {
     "revision": "aaa3ba91a32dda5f2df11d2301764fd8",
     "url": "/static/media/GothamPro-Bold.aaa3ba91.woff"
   },
   {
-    "revision": "33b6cd01c674e0c5d59cde2e48603324",
-    "url": "/static/media/GothamPro-Bold.33b6cd01.eot"
+    "revision": "57a1bd797d48e05aca3cc4d5a79e07cb",
+    "url": "/static/media/GothamPro-Bold.57a1bd79.ttf"
   },
   {
-    "revision": "539b02c8acbdb5fe6fb3",
-    "url": "/static/js/main.539b02c8.chunk.js"
+    "revision": "0ac55c37a2948a0a7498",
+    "url": "/static/js/main.0ac55c37.chunk.js"
   },
   {
     "revision": "d24977b3aca5df089137cdc397d4e8d8",
@@ -76,12 +76,12 @@ self.__precacheManifest = [
     "url": "/static/media/GothamPro-Light.6754c9c4.ttf"
   },
   {
-    "revision": "caede75f4cdc6d33a14539b2a76d354d",
-    "url": "/static/media/GothamPro-Medium.caede75f.woff"
-  },
-  {
     "revision": "fa67313694dddf4d9526c423fff22510",
     "url": "/static/media/GothamPro-Medium.fa673136.eot"
+  },
+  {
+    "revision": "caede75f4cdc6d33a14539b2a76d354d",
+    "url": "/static/media/GothamPro-Medium.caede75f.woff"
   },
   {
     "revision": "cbe1c9c0415b9601b97ea154512615bb",
@@ -108,27 +108,27 @@ self.__precacheManifest = [
     "url": "/static/media/battery1.16d51687.png"
   },
   {
-    "revision": "8d1fc60dacb02d19ad644ea195a692c7",
-    "url": "/static/media/battery2.8d1fc60d.png"
-  },
-  {
     "revision": "98f03e6781a9559deb43bf797be96569",
     "url": "/static/media/battery3.98f03e67.png"
   },
   {
-    "revision": "7a3088d85795257e0329a0346d0e0b97",
-    "url": "/static/media/battery5.7a3088d8.png"
+    "revision": "8d1fc60dacb02d19ad644ea195a692c7",
+    "url": "/static/media/battery2.8d1fc60d.png"
   },
   {
     "revision": "6a7a85ed59647a9ff77af156f095a121",
     "url": "/static/media/battery4.6a7a85ed.png"
   },
   {
+    "revision": "7a3088d85795257e0329a0346d0e0b97",
+    "url": "/static/media/battery5.7a3088d8.png"
+  },
+  {
     "revision": "31ecb91facbd113482900fb8130f2c71",
     "url": "/static/media/about_bg.31ecb91f.jpg"
   },
   {
-    "revision": "502284bd8e22846e5b9be8404a4de692",
+    "revision": "33ae8c075362e59b6409d4a366168a3d",
     "url": "/index.html"
   }
 ];

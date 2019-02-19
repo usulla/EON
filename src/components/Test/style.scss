@@ -12,7 +12,7 @@
     flex-direction: column;
     margin-bottom: -5px;
 
-    @media (max-width: $tablets) and (max-aspect-ratio: $max-aspect-ratio) { 
+    @media (max-width: $tablets) and (max-aspect-ratio: $max-aspect-ratio) {
         height: auto;
         min-height: 90vh;
     }
@@ -20,7 +20,7 @@
     .battery_btn {
         width: 36vw;
         height: 18vw;
-       max-width: 461px;
+        max-width: 461px;
         max-height: 280px;
         margin: 0 auto;
         display: flex;
@@ -28,19 +28,21 @@
         justify-content: center;
 
 
-  @media (min-width:$mobile_l+1) and (max-width:$tablets) {
-    width: 27vw;
-    height: 14vw;
-    }
-  @media (min-width:1024px) and (max-width:1400px) {
-        width:25vw;
-    }
-  @media (max-width: $tablets) and (max-aspect-ratio: $max-aspect-ratio) { 
-    margin-bottom: -5vw!important;
-     width: 60vw;
-    height: 25vh!important;
-    font-size: 13px;
-    }
+        @media (min-width: $mobile_l+1) and (max-width:$tablets) {
+            width: 27vw;
+            height: 14vw;
+        }
+
+        @media (min-width:1024px) and (max-width:1400px) {
+            width: 25vw;
+        }
+
+        @media (max-width: $tablets) and (max-aspect-ratio: $max-aspect-ratio) {
+            margin-bottom: -5vw !important;
+            width: 60vw;
+            height: 25vh !important;
+            font-size: 13px;
+        }
 
         &:hover {
             cursor: pointer;

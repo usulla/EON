@@ -1,6 +1,7 @@
 @import "../../../sass/variables.scss";
-.TestStart{
-.title {
+
+.TestStart {
+    .title {
         text-align: center;
         font-size: 2em;
 
@@ -9,11 +10,12 @@
             font-weight: 400;
         }
     }
-.battery_btn {
-    background: url('../../../images/Test/battery_btn.png') center center no-repeat;
-    background-size: cover;
-    height: 21vw;
+
+    .battery_btn {
+        background: url('../../../images/Test/battery_btn.png') center center no-repeat;
+        background-size: cover;
+        height: 21vw;
 
 
-}
+    }
 }
