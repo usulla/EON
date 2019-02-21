@@ -7,8 +7,27 @@ import style from "./style.scss";
 
 class FirstPage extends Component {
     render() {
+        var simulateClick = function(elem) {
+            // Create our event (with options)
+            var evt = new MouseEvent("click", {
+                bubbles: true,
+                cancelable: true,
+                view: window
+            });
+            // If cancelled, don't dispatch our event
+            var canceled = !elem.dispatchEvent(evt);
+        };
+
+                var scrollCount = 0;
+                const testBlock = document.querySelector(".Test");
+
         return (
             <div className="FirstPage">
+                <a
+                    data-scroll
+                    href="#id_for_scroll"
+                    className="btn_for_scroll"
+                />
                 <div className="FirstPage__center-block">
                     <div className="FirstPage__toptext">
                         <div className="logo">
@@ -37,6 +56,7 @@ class FirstPage extends Component {
                         </div>
                     </div>
                     <div className="bottles_line" />
+                    <a data-scroll href="#test" class="scroll-down"><i class="fas fa-angle-down"></i></a>
                 </div>
                 <div className="age_limit only_desktop">
                     <img src={age_limit} />

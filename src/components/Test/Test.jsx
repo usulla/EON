@@ -28,7 +28,7 @@ class Test extends Component {
     render() {
         const { showTestStart, showQuestions, showTestResult } = this.state;
         return (
-            <div className="Test" id="id_for_scroll">
+            <div className="Test" id="test">
                 {showTestStart ? (
                     <TestStart updatetest={this.updateShowTest} />
                 ) : showQuestions ? (
