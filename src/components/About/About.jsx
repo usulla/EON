@@ -34,7 +34,7 @@ class About extends Component {
                         <div className="taste_description">
                             <div className="title">KIWI BLAST</div>
                             <div className="text">
-                                pending changes Харизматичный микс киви и
+                                Харизматичный микс киви и
                                 ананаса — это взрывное сочетание тропической
                                 энергии. KIWI BLAST — это напиток для тех, кто
                                 ценит высокое качество и пробовал наслаждение на
