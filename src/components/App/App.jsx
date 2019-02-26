@@ -11,7 +11,7 @@ class App extends Component {
         <div>
           <FirstPage firstpage/>
           <Test/>
-          <About dataAbout={dataAbout}/>
+          <About {...dataAbout}/>
           <FooterSocBtns/>
         </div>
         );
