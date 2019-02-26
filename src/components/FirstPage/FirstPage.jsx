@@ -7,20 +7,6 @@ import style from "./style.scss";
 
 class FirstPage extends Component {
     render() {
-        var simulateClick = function(elem) {
-            // Create our event (with options)
-            var evt = new MouseEvent("click", {
-                bubbles: true,
-                cancelable: true,
-                view: window
-            });
-            // If cancelled, don't dispatch our event
-            var canceled = !elem.dispatchEvent(evt);
-        };
-
-                var scrollCount = 0;
-                const testBlock = document.querySelector(".Test");
-
         return (
             <div className="FirstPage">
                 <a
