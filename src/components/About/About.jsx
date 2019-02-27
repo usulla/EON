@@ -9,7 +9,6 @@ import bottle4 from '../../images/About/bottle4.png';
 import bottle5 from '../../images/About/bottle5.png';
 
 const About = ({ description1, description2, tastes }) => {
-    console.log(description1, description2, tastes);
     // const { description1, description2, tastes } = this.props.dataAbout;
     return (
         <div className='About'>
