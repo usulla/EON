@@ -34,9 +34,9 @@ class Questions extends Component {
                 const itemPoint = this.state.answers[
                     this.state.currentQuestion
                 ][index];
-                if (itemPoint == 2) {
+                if (itemPoint === 2) {
                     item.classList.add("true");
-                } else if (itemPoint == 0) {
+                } else if (itemPoint === 0) {
                     item.classList.add("null");
                 } else {
                     item.classList.add("error");
@@ -72,16 +72,16 @@ class Questions extends Component {
                                 "current"
                             );
                     } else {
-                        if (this.state.userPoints == 0) {
+                        if (this.state.userPoints === 0) {
                             this.props.testpoints(1);
                         } else if (this.state.userPoints == 2) {
                             this.props.testpoints(2);
                         } else if (
-                            this.state.userPoints == 4 ||
-                            this.state.userPoints == 6
+                            this.state.userPoints === 4 ||
+                            this.state.userPoints === 6
                         ) {
                             this.props.testpoints(3);
-                        } else if (this.state.userPoints == 8) {
+                        } else if (this.state.userPoints === 8) {
                             this.props.testpoints(4);
                         } else {
                             this.props.testpoints(5);
@@ -101,7 +101,7 @@ class Questions extends Component {
             this.setState({
                 userPoints: this.state.userPoints + Number(currentPoints)
             });
-            if (currentPoints == -2 && this.state.userPoints == 0) {
+            if (currentPoints === -2 && this.state.userPoints === 0) {
                 this.setState({ userPoints: 0 });
             }
         }
