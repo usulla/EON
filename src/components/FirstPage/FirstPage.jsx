@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import logo_pesni from "../../images/FirstPage/pesni_logo.png";
 import logo_eon from "../../images/FirstPage/eon-logo.png";
 import bottles_eon from "../../images/FirstPage/bottles_eon.png";
 import age_limit from "../../images/FirstPage/age_limit.png";
 import style from "./style.scss";
 
-class FirstPage extends Component {
-    render() {
+const FirstPage = () => {
         return (
             <div className="FirstPage">
                 <a
@@ -57,7 +56,6 @@ class FirstPage extends Component {
                 </div>
             </div>
         );
-    }
 }
 
 export default FirstPage;
