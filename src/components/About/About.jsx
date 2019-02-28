@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './style.scss';
 import Taste from './Taste/Taste.jsx';
 import logo_eon from '../../images/About/eon_logo.png';
@@ -19,11 +20,17 @@ const About = ({ description1, description2, tastes }) => {
             </div>
             <div className='tastes'>
                 {tastes.map((item, index) => {
-                    return <Taste {...item} index={index}/>;
+                    return <Taste {...item} index={index} key={index}/>;
                 })}
             </div>
         </div>
     );
 };
+
+About.propTypes = {
+    description1: PropTypes.string.isRequired,
+    description2: PropTypes.string,
+    tastes: PropTypes.array.isRequired
+}
 
 export default About;
