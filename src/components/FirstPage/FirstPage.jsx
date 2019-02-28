@@ -42,7 +42,7 @@ class FirstPage extends Component {
                         </div>
                     </div>
                     <div className="bottles_line" />
-                    <a data-scroll href="#test" class="scroll-down"><i class="fas fa-angle-down"></i></a>
+                    <a data-scroll href="#test" className="scroll-down"><i className="fas fa-angle-down"></i></a>
                 </div>
                 <div className="age_limit only_desktop">
                     <img src={age_limit} />
