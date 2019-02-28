@@ -1,9 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from './style.scss';
 import SocButton from '../../SocButtons/SocButtons.jsx';
 import testResult from './TestResult.json';
 
-const TestResult = ({ testpoints }) => {
+const TestResult = ({ testpoints = 4 }) => {
     const res = testResult.results;
     return (
         <div className='TestResult'>
@@ -38,6 +39,9 @@ const TestResult = ({ testpoints }) => {
             </div>
         </div>
     );
+};
+TestResult.propTypes = {
+    testpoints: PropTypes.number.isRequired
 };
 
 export default TestResult;
